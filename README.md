@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
-<title>Alhagby TV - البث المباشر للقنوات العربية والرياضية | مباريات حية</title>
-<meta name="description" content="شاهد البث المباشر لقنوات بي إن سبورت والعربية والرياضية الحاجبي تيفي - مباريات حية مجاناً الحاجبي تيفي - Alhagby TV ينقل لك أهم الأحداث الرياضية العربية والعالمية ">
+<title>Alhajiby TV - البث المباشر للقنوات العربية والرياضية | مباريات حية</title>
+<meta name="description" content="شاهد البث المباشر لقنوات بي إن سبورت والعربية والرياضية الحاجبي تيفي - مباريات حية مجاناً الحاجبي تيفي - Alhajiby TV ينقل لك أهم الأحداث الرياضية العربية والعالمية ">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
-<title>Alhagby TV — القنوات العربية والرياضية</title>
+<title>Alhajiby TV — القنوات العربية والرياضية</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest/dist/hls.min.js"></script>
@@ -1207,7 +1207,7 @@ input:checked + .slider:before {
 <div class="welcome-screen" id="welcomeScreen">
     <div class="welcome-content">
         <div class="welcome-logo">A</div>
-        <h1 class="welcome-title"> الحاجبي تيفي Alhagby TV</h1>
+        <h1 class="welcome-title"> الحاجبي تيفي Alhajiby TV</h1>
         <p class="welcome-subtitle"> البث المباشر للقنوات العربية والرياضية الحاجبي تيفي<br>استمتع بأفضل المحتوى الرياضي والعربي </p>
         
         <div class="welcome-features">
@@ -1310,7 +1310,7 @@ input:checked + .slider:before {
     <div class="brand">
         <div class="logo">A</div>
         <div>
-            <div class="title">الحاجبي تيفي Alhagby TV</div>
+            <div class="title">الحاجبي تيفي Alhajiby TV</div>
             <div class="subtitle small">البث المباشر للقنوات العربية والرياضية 
            https://www.appcreator24.com/app3769347-7n2g08 رابط التحميل</div>
         </div>
@@ -1328,7 +1328,7 @@ input:checked + .slider:before {
 <!-- المحتوى الرئيسي -->
 <div class="container" id="mainContent" style="display:none">
     <div class="panel">
-        <h3><i class="fas fa-home"></i>مرحباً بك في Alhagby TV</h3>
+        <h3><i class="fas fa-home"></i>مرحباً بك في Alhajiby TV</h3>
         <p class="note">اختر من القائمة أدناه لاستعراض القنوات والمباريات والترتيبات</p>
     </div>
 </div>
@@ -1497,8 +1497,8 @@ let isDarkMode = true;
 let currentView = 'leagues';
 
 // بيانات المستخدمين - الإصلاح: تعريف المتغير بشكل صحيح
-let users = JSON.parse(localStorage.getItem('alhagby_users')) || [];
-const isGuest = localStorage.getItem('alhagby_guest') === 'true';
+let users = JSON.parse(localStorage.getItem('alhajiby_users')) || [];
+const isGuest = localStorage.getItem('alhajiby_guest') === 'true';
 
 // دوال نظام التسجيل
 function showLoginForm() {
@@ -1524,7 +1524,7 @@ function closeLogin() {
 }
 
 function skipLogin() {
-    localStorage.setItem('alhagby_guest', 'true');
+    localStorage.setItem('alhajiby_guest', 'true');
     showMainApp();
     showNotification('مرحباً بك كزائر! يمكنك التسجيل لاحقاً من الإعدادات');
 }
@@ -1585,7 +1585,7 @@ function register() {
     };
 
     users.push(newUser);
-    localStorage.setItem('alhagby_users', JSON.stringify(users));
+    localStorage.setItem('alhajiby_users', JSON.stringify(users));
     loginUser(newUser);
     showNotification('تم إنشاء الحساب بنجاح!', 'success');
 }
@@ -1619,9 +1619,9 @@ function loginUser(user, rememberMe = true) {
     };
 
     if (rememberMe) {
-        localStorage.setItem('alhagby_current_user', JSON.stringify(currentUserData));
+        localStorage.setItem('alhajiby_current_user', JSON.stringify(currentUserData));
     } else {
-        sessionStorage.setItem('alhagby_current_user', JSON.stringify(currentUserData));
+        sessionStorage.setItem('alhajiby_current_user', JSON.stringify(currentUserData));
     }
 
     closeLogin();
@@ -1650,9 +1650,9 @@ function applyUserPreferences(preferences) {
 
 function logout() {
     currentUserData = null;
-    localStorage.removeItem('alhagby_current_user');
-    sessionStorage.removeItem('alhagby_current_user');
-    localStorage.removeItem('alhagby_guest');
+    localStorage.removeItem('alhajiby_current_user');
+    sessionStorage.removeItem('alhajiby_current_user');
+    localStorage.removeItem('alhajiby_guest');
     
     document.getElementById('mainHeader').style.display = 'none';
     document.getElementById('mainContent').style.display = 'none';
@@ -1678,7 +1678,7 @@ function loginWithGoogle() {
     
     if (!users.find(u => u.email === googleUser.email)) {
         users.push(googleUser);
-        localStorage.setItem('alhagby_users', JSON.stringify(users));
+        localStorage.setItem('alhajiby_users', JSON.stringify(users));
     }
     
     loginUser(googleUser);
@@ -1701,7 +1701,7 @@ function loginWithFacebook() {
     
     if (!users.find(u => u.email === facebookUser.email)) {
         users.push(facebookUser);
-        localStorage.setItem('alhagby_users', JSON.stringify(users));
+        localStorage.setItem('alhajiby_users', JSON.stringify(users));
     }
     
     loginUser(facebookUser);
@@ -1961,7 +1961,7 @@ function loadMatches() {
     html += '<div class="matches-container">';
     html += '<div class="matches-loading" id="matchesLoading">';
     html += '<i class="fas fa-spinner fa-spin"></i><br>';
-    html += 'جاري تحميل Alhagby TV...';
+    html += 'جاري تحميل Alhajiby TV...';
     html += '</div>';
     html += '<iframe class="matches-frame" id="matchesFrame" src="about:blank"></iframe>';
     html += '</div>';
@@ -2092,7 +2092,7 @@ function loadMatchesInterface() {
                 html = html.replace(pattern, (match) => {
                     if (match.includes('يلا') || match.includes('Yalla') || match.includes('yalla') || 
                         match.includes('شوت') || match.includes('Shot') || match.includes('shot')) {
-                        return match.replace(/يلا|Yalla|yalla|شوت|Shot|shot/gi, 'Alhagby TV')
+                        return match.replace(/يلا|Yalla|yalla|شوت|Shot|shot/gi, 'Alhajiby TV')
                                    .replace(/\s+/g, ' ')
                                    .trim();
                     }
@@ -2133,7 +2133,7 @@ function loadMatchesInterface() {
                     .logo::before,
                     .header-logo::before,
                     .site-logo::before {
-                        content: "Alhagby TV" !important;
+                        content: "Alhajiby TV" !important;
                         position: absolute !important;
                         top: 50% !important;
                         left: 50% !important;
@@ -2178,16 +2178,16 @@ function loadMatchesInterface() {
                     // استبدال ديناميكي بعد تحميل الصفحة
                     function replaceAllText() {
                         // استبدال في النصوص
-                        document.body.innerHTML = document.body.innerHTML.replace(/يلا\\\\s*شوت/gi, 'Alhagby TV');
-                        document.body.innerHTML = document.body.innerHTML.replace(/Yalla\\\\s*Shot/gi, 'Alhagby TV');
-                        document.body.innerHTML = document.body.innerHTML.replace(/yalla\\\\s*shot/gi, 'Alhagby TV');
+                        document.body.innerHTML = document.body.innerHTML.replace(/يلا\\\\s*شوت/gi, 'Alhajiby TV');
+                        document.body.innerHTML = document.body.innerHTML.replace(/Yalla\\\\s*Shot/gi, 'Alhajiby TV');
+                        document.body.innerHTML = document.body.innerHTML.replace(/yalla\\\\s*shot/gi, 'Alhajiby TV');
                         
                         // استبدال في attributes
                         const elements = document.querySelectorAll('*');
                         elements.forEach(el => {
                             for (let attr of ['alt', 'title', 'placeholder', 'value']) {
                                 if (el[attr] && (el[attr].includes('يلا') || el[attr].includes('Yalla'))) {
-                                    el[attr] = el[attr].replace(/يلا\\\\s*شوت|Yalla\\\\s*Shot/gi, 'Alhagby TV');
+                                    el[attr] = el[attr].replace(/يلا\\\\s*شوت|Yalla\\\\s*Shot/gi, 'Alhajiby TV');
                                 }
                             }
                         });
@@ -2227,7 +2227,7 @@ function loadMatchesInterface() {
                 let node;
                 while (node = walker.nextNode()) {
                     if (node.textContent.includes('يلا') || node.textContent.includes('Yalla')) {
-                        node.textContent = node.textContent.replace(/يلا\s*شوت|Yalla\s*Shot/gi, 'Alhagby TV');
+                        node.textContent = node.textContent.replace(/يلا\s*شوت|Yalla\s*Shot/gi, 'Alhajiby TV');
                     }
                 }
             } catch (error) {
@@ -2246,7 +2246,7 @@ function loadMatchesInterface() {
         showError() {
             this.frame.srcdoc = `
                 <div style="background: #1a237e; color: white; height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column;">
-                    <h1>Alhagby TV</h1>
+                    <h1>Alhajiby TV</h1>
                     <p>تعذر تحميل المحتوى</p>
                     <button onclick="window.location.reload()" style="padding: 10px 20px; background: white; color: #1a237e; border: none; border-radius: 5px; margin-top: 10px;">
                         إعادة المحاولة
@@ -2333,7 +2333,7 @@ function loadSettings() {
     html += '</div>';
     
     html += '<div class="note" style="text-align:center;margin-top:20px">';
-    html += 'تطبيق Alhagby TV - جميع الحقوق محفوظة 2025';
+    html += 'تطبيق Alhajiby TV - جميع الحقوق محفوظة 2025';
     html += '</div>';
     
     html += '</div>';
@@ -2360,7 +2360,7 @@ function toggleDarkMode() {
         const userIndex = users.findIndex(u => u.id === currentUserData.id);
         if (userIndex !== -1) {
             users[userIndex].preferences.darkMode = isDarkMode;
-            localStorage.setItem('alhagby_users', JSON.stringify(users));
+            localStorage.setItem('alhajiby_users', JSON.stringify(users));
         }
     }
 }
@@ -2373,13 +2373,13 @@ function setDefaultQuality(quality) {
         const userIndex = users.findIndex(u => u.id === currentUserData.id);
         if (userIndex !== -1) {
             users[userIndex].preferences.videoQuality = quality;
-            localStorage.setItem('alhagby_users', JSON.stringify(users));
+            localStorage.setItem('alhajiby_users', JSON.stringify(users));
         }
     }
 }
 
 function contactUs() {
-    window.location.href = 'mailto:zidanalhagby@gmail.com?subject=تواصل مع Alhagby TV';
+    window.location.href = 'mailto:zidanalhagby@gmail.com?subject=تواصل مع Alhajiby TV';
 }
 
 // التنقل بين الأقسام
@@ -2446,8 +2446,8 @@ function loadDefaultContent() {
 // تهيئة التطبيق
 function initApp() {
     // التحقق من وجود مستخدم مسجل الدخول
-    const savedUser = localStorage.getItem('alhagby_current_user') || sessionStorage.getItem('alhagby_current_user');
-    const guestStatus = localStorage.getItem('alhagby_guest') === 'true';
+    const savedUser = localStorage.getItem('alhajiby_current_user') || sessionStorage.getItem('alhajiby_current_user');
+    const guestStatus = localStorage.getItem('alhajiby_guest') === 'true';
     
     if (savedUser) {
         currentUserData = JSON.parse(savedUser);
